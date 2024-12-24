@@ -16,6 +16,9 @@ use App\Http\Controllers\SlideshowController;
 use App\Http\Controllers\UnduhanController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('info', function () {
+    phpinfo();
+});
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('sejarah', [PageController::class, 'sejarah'])->name('page.sejarah');
 Route::get('unduhan', [PageController::class, 'unduhan'])->name('page.unduhan');
